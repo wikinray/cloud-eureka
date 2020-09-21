@@ -16,6 +16,7 @@
         <module>consul-provider-tag2</module>
         <module>consul-consumer-ribbon</module>
         <module>consul-consumer-discoveryclient</module>
+        <module>consul-config-customize</module>
     </modules>
 
     <dependencyManagement>

@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: consul-config-customize
+  profiles:
+    active: dev
+
+  cloud:
+    consul:
+      port: 8500
+      host: 172.16.2.103
+      discovery:
+        #需要注册ip地址而非主机名
+        prefer-ip-address: true
+        #注册的真实ip地址（尤其docker）
+        ip-address: 172.16.4.10
+        #真实的port(针对docker)
+        #port: ${server.port}
+        #相同服务进行分组，打不同标签
+        tags: tag2
+        #服务健康检查时间
+        #health-check-interval: 10s
+        #健康检查路径，默认/actuator/health
+        #health-check-path: /health.json
+      config:
+        enabled: true
+        data-key: data
+        format: yaml
+        prefix: configuration
+        default-context: app
+        profile-separator: ':'
