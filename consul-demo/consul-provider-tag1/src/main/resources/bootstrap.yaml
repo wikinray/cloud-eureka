@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8082
 spring:
   application:
     name: consul-provider
@@ -18,7 +18,7 @@ spring:
         #真实的port(针对docker)
         #port: ${server.port}
         #相同服务进行分组，打不同标签
-        tags: consul,provider
+        tags: tag1
         #服务健康检查时间
         #health-check-interval: 10s
         #健康检查路径，默认/actuator/health

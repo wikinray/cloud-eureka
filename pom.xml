@@ -27,5 +27,6 @@
         <module>cloud-bom</module>
         <module>erueka-server</module>
         <module>cloud-consul</module>
+        <module>consul-demo</module>
     </modules>
 </project>
