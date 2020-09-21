@@ -1,8 +1,14 @@
 spring:
-                      cloud:
-                        consul:
-                          port: 8500
-                          host: 172.16.2.103
-                          discovery:
-                            prefer-ip-address: true
-                            ip-address: 172.16.4.10
+  cloud:
+    consul:
+      port: 8500
+      host: 172.16.2.103
+      discovery:
+        prefer-ip-address: true
+        ip-address: 172.16.4.10
+
+
+consul:
+  provider:
+    hello:
+      name: 单调递
