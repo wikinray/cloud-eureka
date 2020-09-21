@@ -3,10 +3,5 @@ server:
 spring:
   application:
     name: consul-consumer
-  cloud:
-    consul:
-      port: 8500
-      host: 172.16.2.103
-      discovery:
-        prefer-ip-address: true
-        ip-address: 172.16.4.10
+  profiles:
+    active: test
