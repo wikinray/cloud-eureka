@@ -5,4 +5,4 @@ spring:
       host: 172.16.2.103
       discovery:
         prefer-ip-address: true
-        ip-address: 172.16.4.10
+        ip-address: 172.16.4.6

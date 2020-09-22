@@ -23,3 +23,5 @@ spring:
         #health-check-interval: 10s
         #健康检查路径，默认/actuator/health
         #health-check-path: /health.json
+        server-list-query-tags:
+          consul-provider: tag1
