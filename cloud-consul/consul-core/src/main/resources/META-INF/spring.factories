@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.xmylx.cloud.consul.core.common.config.CommonConfiguration

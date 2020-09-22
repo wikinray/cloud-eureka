@@ -37,10 +37,10 @@ public class UserPermissionUtil {
      */
     public static void permission(User user) {
         List<String> allowPermissionService=new ArrayList<>();
-        if(user.getUserName().equals("admin")){
+        if("admin".equals(user.getUserName())){
             allowPermissionService.add("consul-consumer");
             allowPermissionService.add("consul-provider");
-        }else if(user.getUserName().equals("spring")){
+        }else if("spring".equals(user.getUserName())){
             allowPermissionService.add("consul-consumer");
         }
         user.setAllowPermissionService(allowPermissionService);
