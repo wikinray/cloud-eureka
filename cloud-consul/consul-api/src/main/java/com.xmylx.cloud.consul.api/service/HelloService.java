@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "consul-provider")
 public interface HelloService {
 
-    @RequestMapping(value = "/consul/provider/hello/sayHello",method = RequestMethod.GET)
+    @RequestMapping(value = "/provider/hello/sayHello",method = RequestMethod.GET)
     String sayHello(@RequestParam("name")String name);
 
 }

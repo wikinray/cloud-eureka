@@ -22,6 +22,16 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
+
+
+        <!-- sleuth  begin-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+        <!--sleuth  end-->
+
+
         <dependency>
             <groupId>com.xmylx.cloud</groupId>
             <artifactId>consul-api</artifactId>
