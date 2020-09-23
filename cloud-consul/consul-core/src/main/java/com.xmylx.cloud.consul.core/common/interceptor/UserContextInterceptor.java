@@ -14,6 +14,9 @@ public class UserContextInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        if("/actuator/health".equals(request.getRequestURI())){
+            return true;
+        }
         User user=getUser(request);
         UserPermissionUtil.permission(user);
         if(!UserPermissionUtil.verify(user,request)){

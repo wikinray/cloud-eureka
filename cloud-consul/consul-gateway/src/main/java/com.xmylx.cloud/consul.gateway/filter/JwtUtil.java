@@ -16,7 +16,7 @@ public class JwtUtil {
     public static final String HEADER_AUTH="Authorization";
 
 
-    public static String generaeToken(String user){
+    public static String generateToken(String user){
         HashMap<String,Object> map=new HashMap<>();
         map.put("id",new Random().nextInt());
         map.put("user",user);

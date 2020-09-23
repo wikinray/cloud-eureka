@@ -12,6 +12,6 @@ public class TokenController {
 
     @GetMapping("/getToken/{name}")
     public String get(@PathVariable("name")String name){
-        return JwtUtil.generaeToken(name);
+        return JwtUtil.generateToken(name);
     }
 }

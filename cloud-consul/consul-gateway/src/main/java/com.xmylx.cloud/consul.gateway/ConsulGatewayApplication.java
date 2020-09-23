@@ -11,8 +11,8 @@ public class ConsulGatewayApplication {
     public static void main(String[] args) {
         SpringApplication.run(ConsulGatewayApplication.class,args);
     }
-
-   /* @Bean
+/*
+   @Bean
     public ServerCodecConfigurer serverCodecConfigurer(){
         return ServerCodecConfigurer.create();
     }*/
