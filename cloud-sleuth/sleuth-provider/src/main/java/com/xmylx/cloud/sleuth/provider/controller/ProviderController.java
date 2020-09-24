@@ -1,6 +1,7 @@
 package com.xmylx.cloud.sleuth.provider.controller;
 
-import com.xmylx.cloud.sleuth.api.feign.HelloService;
+import brave.baggage.BaggageField;
+import brave.propagation.ExtraFieldPropagation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +17,7 @@ public class ProviderController {
     @GetMapping(value = "/hello/sayHello")
     public String sayHello(String name) {
         log.info("server received .参数={}",name);
-        String result="hello,"+name;
+        String result="hello,"+name+",SessionId is "+ ExtraFieldPropagation.get("SessionId");;
         log.info("server received .参数={}",result);
         return result;
     }
