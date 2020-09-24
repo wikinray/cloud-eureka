@@ -28,5 +28,6 @@
         <module>erueka-server</module>
         <module>cloud-consul</module>
         <module>consul-demo</module>
+        <module>cloud-sleuth</module>
     </modules>
 </project>

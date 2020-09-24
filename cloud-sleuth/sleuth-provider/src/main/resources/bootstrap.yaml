@@ -1,0 +1,9 @@
+server:
+  port: 8111
+spring:
+  application:
+    name: sleuth-provider
+  profiles:
+    active: test
+
+

@@ -29,4 +29,7 @@ spring:
           enabled: true
 logging:
   level:
+    root: info
     org.springframework.cloud.gateway: debug
+    org.springframework.web.servlet.DispatcherServlet: DEBUG
+    org.springframework.cloud.sleuth: DEBUG
