@@ -1,0 +1,9 @@
+server:
+  port: 9020
+spring:
+  application:
+    name: skyWalking-provider
+  profiles:
+    active: test
+
+
