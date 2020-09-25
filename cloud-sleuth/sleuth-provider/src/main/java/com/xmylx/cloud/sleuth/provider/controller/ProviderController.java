@@ -1,6 +1,5 @@
 package com.xmylx.cloud.sleuth.provider.controller;
 
-import brave.baggage.BaggageField;
 import brave.propagation.ExtraFieldPropagation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
