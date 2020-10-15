@@ -30,5 +30,6 @@
         <module>consul-demo</module>
         <module>cloud-sleuth</module>
         <module>cloud-skyWalking</module>
+        <module>cloud-gateway</module>
     </modules>
 </project>
