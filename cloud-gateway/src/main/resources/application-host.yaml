@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: host_route
+          uri: http://www.baidu.com/
+          predicates:
+            - Host=**.baidu.com:8080
+          order: 10

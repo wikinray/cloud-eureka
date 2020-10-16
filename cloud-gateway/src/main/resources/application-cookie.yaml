@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: cookie_route
+          uri: http://www.baidu.com/
+          predicates:
+            - Cookie=chocolate,ch.px
+          order: 10

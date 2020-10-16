@@ -5,17 +5,21 @@ server:
 spring:
   application:
     name: spring-cloud-gateway
+  profiles:
+    active: method
   cloud:
     gateway:
       routes:
         - id: jd_route
-          uri: http://jd.com:80/
+          uri: http://www.jd.com/
           predicates:
-            - Path=/id
+            - Path=/jd
+          order: 0
         - id: baidu_route
-          uri: http://baidu.com:80/
+          uri: http://www.baidu.com/
           predicates:
             - Path=/baidu
+          order: 1
 logging:
   level:
     org.springframework.cloud.gateway: TRACE

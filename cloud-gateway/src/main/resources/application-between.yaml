@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: between_route
+          uri: http://www.baidu.com/
+          predicates:
+            - Between=2020-10-16T14:30:23.079+08:00[Asia/Shanghai],2020-10-16T15:30:23.079+08:00[Asia/Shanghai]
+          order: 10

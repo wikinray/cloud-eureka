@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: before_route
+          uri: http://www.baidu.com/
+          predicates:
+            - Before=2020-10-16T16:30:23.079+08:00[Asia/Shanghai]
+          order: 10

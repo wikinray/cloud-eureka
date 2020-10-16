@@ -1,8 +1,0 @@
-server:
-  port: 9021
-spring:
-  application:
-    name: skyWalking-consumer
-  profiles:
-    active: test
-

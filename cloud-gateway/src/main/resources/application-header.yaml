@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: header_route
+          uri: http://www.baidu.com/
+          predicates:
+            - Header=X-request-Id,xjj
+          order: 10
