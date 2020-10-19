@@ -2,8 +2,8 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: method_route
+        - id: query_route
           uri: http://www.baidu.com/
           predicates:
-            - Method=POST
+            - Query=name,abc
           order: 10

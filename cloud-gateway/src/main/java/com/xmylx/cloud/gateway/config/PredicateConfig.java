@@ -100,6 +100,18 @@ public class PredicateConfig {
                 .build();
     }
 
+    /**
+     * Method Route Predicate Factory
+     * @param builder
+     * @return
+     */
+    //@Bean
+    public RouteLocator queryRouteLocator(RouteLocatorBuilder builder){
+        return builder.routes()
+                .route("query_route",r->r.query("name","abc").uri("http://www.jd.com"))
+                .build();
+    }
+
     public static void main(String[] args) {
         System.out.println(LocalDateTime.now().minusHours(1).atZone(ZoneId.systemDefault()));
     }

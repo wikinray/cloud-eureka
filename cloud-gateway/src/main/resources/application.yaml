@@ -6,7 +6,7 @@ spring:
   application:
     name: spring-cloud-gateway
   profiles:
-    active: method
+    active: query
   cloud:
     gateway:
       routes:
