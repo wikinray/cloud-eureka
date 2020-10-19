@@ -101,7 +101,7 @@ public class PredicateConfig {
     }
 
     /**
-     * Method Route Predicate Factory
+     * Query Route Predicate Factory
      * @param builder
      * @return
      */
@@ -109,6 +109,18 @@ public class PredicateConfig {
     public RouteLocator queryRouteLocator(RouteLocatorBuilder builder){
         return builder.routes()
                 .route("query_route",r->r.query("name","abc").uri("http://www.jd.com"))
+                .build();
+    }
+
+    /**
+     * RemoteAddr Route Predicate Factory
+     * @param builder
+     * @return
+     */
+    //@Bean
+    public RouteLocator remoteAddrRouteLocator(RouteLocatorBuilder builder){
+        return builder.routes()
+                .route("remoteAddr_route",r->r.remoteAddr("127.0.0.1").uri("http://www.jd.com"))
                 .build();
     }
 

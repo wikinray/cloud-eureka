@@ -6,7 +6,7 @@ spring:
   application:
     name: spring-cloud-gateway
   profiles:
-    active: query
+    active: remoteAddr
   cloud:
     gateway:
       routes:

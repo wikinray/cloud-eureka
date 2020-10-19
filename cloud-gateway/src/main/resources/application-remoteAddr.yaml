@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: query_route
+          uri: http://www.baidu.com/
+          predicates:
+            - RemoteAddr=127.0.0.1
+          order: 10
