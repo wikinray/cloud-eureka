@@ -6,20 +6,28 @@ spring:
   application:
     name: spring-cloud-gateway
   profiles:
-    active: remoteAddr
+    active: addRequestHeader
   cloud:
+    nacos:
+      discovery:
+        server-addr: 172.16.2.103:8848
+        group: Z_GROUP
     gateway:
-      routes:
-        - id: jd_route
-          uri: http://www.jd.com/
-          predicates:
-            - Path=/jd
-          order: 0
-        - id: baidu_route
-          uri: http://www.baidu.com/
-          predicates:
-            - Path=/baidu
-          order: 1
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+#      routes:
+#        - id: jd_route
+#          uri: http://www.jd.com/
+#          predicates:
+#            - Path=/jd
+#          order: 0
+#        - id: baidu_route
+#          uri: http://www.baidu.com/
+#          predicates:
+#            - Path=/baidu
+#          order: 1
 logging:
   level:
     org.springframework.cloud.gateway: TRACE

@@ -1,0 +1,11 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: cloud-web
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.16.2.103:8848
+        ip: 172.16.4.10
+        group: Z_GROUP

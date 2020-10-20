@@ -1,0 +1,28 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: stripPrefix_route
+          #uri: http://www.baidu.com
+          uri: http://localhost:8001/test
+          predicates:
+            - Path=/baidu/test/**
+          filters:
+            - StripPrefix=2
+
+
+#        - id: addRequestHeader_route
+#          uri: http://httpbin.org:80/get
+#          predicates:
+#            - Path=/addHeader
+#          filters:
+#            - AddRequestHeader=X-Request-Foo,Bar
+#          order: 10
+#        - id: addRequestParameter_route
+#          uri: http://localhost:8001/web/test
+#          predicates:
+#            - Query=token,abc
+#          filters:
+#            - AddRequestHeader=X-Request-Foo,Bar
+#            - AddRequestParameter=example,1234
+#          order: 11

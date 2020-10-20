@@ -31,5 +31,6 @@
         <module>cloud-sleuth</module>
         <module>cloud-skyWalking</module>
         <module>cloud-gateway</module>
+        <module>cloud-web</module>
     </modules>
 </project>
